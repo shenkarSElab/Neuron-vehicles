@@ -14,79 +14,54 @@ robots can be Braitenberg vehicles that is light seekers and light
 avoiders. But it is also possible to simulate predator prey
 interactions etc.
 
-<>https://github.com/WSHarwin/Neuron-vehicles  Download at<endu>
+Download at https://github.com/WSHarwin/Neuron-vehicles
 
-Versions compiled for Microsoft Windows are available at
-
-http://www.personal.reading.ac.uk/~shshawin/LN/braitenberg.html 
-
+Versions compiled for Microsoft Windows are available at  
+http://www.personal.reading.ac.uk/~shshawin/LN/braitenberg.html  
 however these have had only very rudimentary testing.
 
 
 # Compiling
-
 ## Compiling under Linux/g++
 
-Program needs libglut3-dev
- sudo apt-get install freeglut3-dev
+Program needs libglut3-dev  
+`sudo apt-get install freeglut3-dev`
 This should also install opengl (mesa)
 
 Compile with
 
-g++ brait032.cpp nrWindow.cpp glutMaster.cpp glutWindow.cpp  -L/usr/local/lib  -lglut -lGL -lGLU
+`g++ brait032.cpp nrWindow.cpp glutMaster.cpp glutWindow.cpp  -L/usr/local/lib  -lglut -lGL -lGLU -o brait32`
 
- - <>http:braitenberg_v032.zip source code in a zip file<endu>
+[source code in a zip file](../../archive/master.zip)
 
-** Compiling under Microsoft windows and VisualC++
+##Compiling under Microsoft windows and VisualC++
 
-Microsoft windows supports openGL but you will need to also install
-GLUT or Freeglut. These provide glut.h, glut32.lib as well as the
-runtime Glut32.dll. Freeglut provides in addition, 
-freeglut.h, freeglut_ext.h, freeglut_std.h, freeglut.lib, and freeglut.dll.
+Microsoft windows supports openGL but you will need to also __install GLUT or Freeglut__. These provide glut.h, glut32.lib as well as the runtime Glut32.dll. Freeglut provides in addition, freeglut.h, freeglut_ext.h, freeglut_std.h, freeglut.lib, and freeglut.dll.
 
-To avoid compiling these from source I suggest using a site such as
-
-http://web.eecs.umich.edu/~sugih/courses/eecs487/glut-howto/
-for glut
-
-or
-http://www.transmissionzero.co.uk/software/freeglut-devel/
-for freeglut
-
-There may be hints from
-http://web.eecs.umich.edu/~sugih/courses/eecs487/glut-howto/
-
+To avoid compiling these from source I suggest using guides such as [this for glut](http://web.eecs.umich.edu/~sugih/courses/eecs487/glut-howto/) or [this for freeglut](http://www.transmissionzero.co.uk/software/freeglut-devel/)
 
 ### header file:
 
-Glut header files *.h will go in a directory GL 
-try
-
- C:\Program Files (x86)\Microsoft Visual Studio *\VC\include\GL\glut.h
+Glut header files *.h will go in a directory GL try  
+ `C:\Program Files (x86)\Microsoft Visual Studio *\VC\include\GL\glut.h`
 
 The '*' matches your version of VS: 12.0 for VS2013, 11.0 for VS2012, 10.0 for VS2010, 9.0 for VS2008. You may have to create the include folder.
-
 
 ### library file:
 
 Library (*.lib) files will go somewhere like
 
-
-C:\Program Files (x86)\Microsoft Visual Studio *\VC\lib\glut32.lib
+`C:\Program Files (x86)\Microsoft Visual Studio *\VC\lib\glut32.lib`
 
 If you want to build 64-bit apps, put the 64-bit library file in:
 
-C:\Program Files (x86)\Microsoft Visual Studio *\VC\lib\amd64\glut32.lib
-
-
+`C:\Program Files (x86)\Microsoft Visual Studio *\VC\lib\amd64\glut32.lib`
 
 # Running under Linux
 
 Should run from the command line or from a folder
 
 # Running under Windows
-
-
 
 To run you will need the Glut32.dll (or the freeglut.dll) either in the same directory as 
 brait.exe or in the windows system directory.
